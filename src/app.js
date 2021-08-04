@@ -1,10 +1,6 @@
-require('dotenv').config()
-
 const express = require('express')
 const bodyParser = require('body-parser');
-
 const app = express()
-const port = parseInt(process.env.PORT)
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -27,10 +23,4 @@ app.post('/enviarEmail', async (req, res)  => {
     }  
 })
 
-app.listen(port, () => {
-  console.log(`---------------------------------`)
-  console.log(`Send email listening `)
-  console.log(`Port: ${port}`)
-  console.log(`http://localhost:${port}`)
-  console.log(`---------------------------------`)
-})
+module.exports = app
