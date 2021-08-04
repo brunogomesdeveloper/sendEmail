@@ -26,5 +26,9 @@ app.post('/enviarEmail', async (req, res)  => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`---------------------------------`)
+  console.log(`Send email listening `)
+  console.log(`Port: ${port}`)
+  console.log(`http://localhost:${port}`)
+  console.log(`---------------------------------`)
 })
